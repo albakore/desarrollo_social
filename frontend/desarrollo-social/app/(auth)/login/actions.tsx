@@ -15,7 +15,7 @@ export async function login(state : any, formdata: FormData) {
 			message: 'Usuario y/o contraseña incorrecto'
 		}
 	}
-	redirect('/panel')
+	redirect('/backoffice')
 	
 
 	

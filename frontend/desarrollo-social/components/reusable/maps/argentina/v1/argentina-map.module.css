@@ -1,0 +1,21 @@
+.provincia:hover {
+	fill: rgb(62, 113, 190);
+	stroke-width: 2px;
+	stroke: var(--chakra-colors-bg-emphasized);
+	cursor: pointer;
+	
+}
+
+@keyframes draw {
+	100% {
+	  stroke-dashoffset: -50;
+	}
+  }
+
+.provincia[selected=true]{
+	fill: rgb(0, 39, 99);
+	stroke-dasharray: 10px;
+	
+	stroke-width: 4px;
+	animation: draw 5s infinite linear;
+}
