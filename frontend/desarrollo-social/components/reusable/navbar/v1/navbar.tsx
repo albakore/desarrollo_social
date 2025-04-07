@@ -8,7 +8,7 @@ export function Navbar() {
 	const device = useBreakpointValue(
 		{
 			base: <NavbarMobile/>,
-			md: <NavbarMobile/>,
+			md: <NavbarDesktop/>,
 			lg: <NavbarDesktop/>,
 		}
 	)

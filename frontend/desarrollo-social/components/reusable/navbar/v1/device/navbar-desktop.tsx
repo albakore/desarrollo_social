@@ -2,20 +2,22 @@ import { ColorModeButton } from '@/components/ui/color-mode'
 import { Avatar, Box, Button, Icon, IconButton, Image, Link, Menu, Portal, Spacer, Stack } from '@chakra-ui/react'
 import { FaPlus } from "react-icons/fa";
 import React from 'react'
+import { redirect } from 'next/navigation';
 
 export function NavbarDesktop() {
   return (
     <Box
       as='header'
-      bg={'bg.emphasized'}
+      bg={'bg.subtle'}
       w={'full'}
       h={'50px'}
       alignContent={'center'}
       paddingInline={4}
-
+      borderBottom={'1px solid'}
+      borderColor={'bg.emphasized'}
     >
       <Stack as='nav' direction={'row'} alignItems={'center'}>
-        <Image w='35px' h={'35px'} rounded="md" src="favicon.ico" alt="App" />
+        <Image w='35px' h={'35px'} rounded="md" src="/favicon.ico" alt="App" />
         
 
         <Stack
@@ -26,9 +28,9 @@ export function NavbarDesktop() {
           alignContent={'center'}
           alignItems={'center'}
         >
-          <Link>Dashboard</Link>
-          <Link>Legajos</Link>
-          <Link>Comedores</Link>
+          <Link focusRing={'none'} href='/backoffice/dashboard'>Dashboard</Link>
+          <Link focusRing={'none'} href='/backoffice/gestionar'>Gestion</Link>
+          <Link focusRing={'none'} href='/backoffice/desarrollo-social'>Desarrollo Social</Link>
           <NewButton/>
         </Stack>
         <Spacer />
@@ -54,7 +56,7 @@ function ProfileButton() {
         <Menu.Positioner>
           <Menu.Content>
             <Menu.Item value="new-txt-a">
-              Mi Cuenta
+              <Link unstyled href='/backoffice/perfil/configuracion'>Mi Cuenta</Link>
             </Menu.Item>
             <Menu.Item value="new-file-a">
               Configuraciones
@@ -65,7 +67,7 @@ function ProfileButton() {
             <Menu.Item value="open-file-a">
               Ayuda
             </Menu.Item>
-            <Menu.Item value="export-a" color={'red.focusRing'}>
+            <Menu.Item value="export-a" color={'red.focusRing'} onClick={()=> redirect('/login')}>
               Cerrar Session
             </Menu.Item>
           </Menu.Content>
