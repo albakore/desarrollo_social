@@ -55,17 +55,17 @@ function ProfileButton() {
       <Portal>
         <Menu.Positioner>
           <Menu.Content>
-            <Menu.Item value="new-txt-a">
-              <Link unstyled href='/backoffice/perfil/configuracion'>Mi Cuenta</Link>
+            <Menu.Item value="new-txt-a" asChild >
+              <Link focusRing={'none'} href='/backoffice/perfil/configuracion'>Mi Cuenta</Link>
             </Menu.Item>
-            <Menu.Item value="new-file-a">
-              Configuraciones
+            <Menu.Item value="new-file-a" asChild>
+            <Link focusRing={'none'} href='/backoffice/perfil/configuracion'>Configuraciones</Link>
             </Menu.Item>
-            <Menu.Item value="new-win-a">
-              Sistema
+            <Menu.Item value="new-win-a" asChild>
+            <Link focusRing={'none'} href='/backoffice/perfil/configuracion'>Sistema</Link>
             </Menu.Item>
-            <Menu.Item value="open-file-a">
-              Ayuda
+            <Menu.Item value="open-file-a"asChild>
+            <Link focusRing={'none'} href='/backoffice/perfil/configuracion'>Ayuda</Link>
             </Menu.Item>
             <Menu.Item value="export-a" color={'red.focusRing'} onClick={()=> redirect('/login')}>
               Cerrar Session

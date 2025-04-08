@@ -7,7 +7,7 @@ import { NuevoLegajoForm } from './legajo-forms'
 export function NuevoLegajoDialog() {
   const contentRef = React.useRef<HTMLDivElement>(null)
   return (
-    <Dialog.Root size={'xl'} placement={'center'}>
+    <Dialog.Root size={'lg'} placement={'center'}>
       <Dialog.Trigger asChild>
         <Button>
           Nuevo

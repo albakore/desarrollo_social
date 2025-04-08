@@ -3,7 +3,7 @@ import { SubNavbar } from '@/components/reusable/subnavbar/v1/subnavbar'
 import { Box } from '@chakra-ui/react'
 import React from 'react'
 import { ReactFormState } from 'react-dom/client'
-import { Bs0Circle } from 'react-icons/bs'
+import { Bs0Circle, BsArrowBarUp } from 'react-icons/bs'
 
 const navlinks: NavCompositionProps = [
 	{
