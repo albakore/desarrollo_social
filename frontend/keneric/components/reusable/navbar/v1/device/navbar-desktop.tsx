@@ -3,6 +3,8 @@ import { Avatar, Box, Button, Icon, IconButton, Image, Link, Menu, Portal, Space
 import { FaPlus } from "react-icons/fa";
 import React from 'react'
 import { redirect } from 'next/navigation';
+import { AccountButton } from '@/components/reusable/account/v1/account';
+import { accountOptions } from '@/components/reusable/account/v1/options';
 
 export function NavbarDesktop() {
   return (
@@ -35,7 +37,7 @@ export function NavbarDesktop() {
         </Stack>
         <Spacer />
         <Stack direction={'row'}>
-          <ProfileButton />
+          <AccountButton {...accountOptions}/>
           <ColorModeButton size={'md'}/>
         </Stack>
       </Stack>

@@ -5,7 +5,7 @@ import React from 'react'
 export function AccountButton(props : AccountButtonProps) {
   return (
     <Menu.Root>
-      <Menu.Trigger>
+      <Menu.Trigger focusRing={'none'}>
         <AccountAvatar {...props.avatar}/>
       </Menu.Trigger>
       <Portal>
@@ -33,10 +33,12 @@ function AccountMenuItem(props: AccountMenuItemProps) {
       value={props.title}
       disabled={props.disabled}
       bg={props.bg ?? props.bg + '.emphasized'}
+      color={props?.color}
       _hover={props.bg ? { bg: props.bg + '.muted' } : {}}
       onClick={props.onClick}
+      rounded={'md'}
     >
-      <Link unstyled href={props.path}>
+      <Link focusRing={'none'} unstyled href={props.path}>
         {props.title}
       </Link>
     </Menu.Item>

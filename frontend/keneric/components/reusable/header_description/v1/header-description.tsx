@@ -6,6 +6,7 @@ export function HeaderDescription(props: HeaderDescriptionProps) {
       borderBottom={'1px solid'}
       borderColor={'bg.emphasized'}
       paddingBlock={8}
+      mb={12}
     >
       <Container maxW={'7xl'}>
         <Stack
