@@ -8,7 +8,7 @@
 
 @keyframes draw {
 	100% {
-	  stroke-dashoffset: -50;
+	  stroke-dashoffset: -100;
 	}
   }
 
